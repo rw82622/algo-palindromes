@@ -1,2 +1,5 @@
+import re
 def palindrome(word):
-    # Write code here
+    word = str(word).lower()
+    word = re.sub("\W", '', word)
+    return True if word == word[::-1] else False
